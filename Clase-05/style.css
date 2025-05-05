@@ -1,41 +1,48 @@
-
-
-/* Barra de navegación horizontal primaria*/
-.a-header {
-    padding-left: 22rem;
-    height: 60px; /* Altura del nav */
+/* === Base === */
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.a-header li {
-    float: left;    /* el elemento se posiciona ala izquieda y deja espacio a la derecha */
-    margin-right: 1.2rem;
-    line-height: 60px; /* Igual a la altura para centrar verticalmente */
+main {
+    margin: 0 19rem;
+    text-align: left;
 }
 
-.img-France24 {
+/* === Reutilizables === */
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #011d26;
+    font-size: 1rem;
+    line-height: 50px;
+    white-space: nowrap; /* 💡 Esto evita que el texto se parta en dos líneas */
+}
+
+.logo-img {
     width: 54px;
     height: 54px;
-    vertical-align: middle; /* alinea la imagen con el texto */
-}
-.img-France24{
-    width: 54px;
-    height: 54px;
-}
-.live{
-   width: 20px;
-   height: 20px; 
+    vertical-align: middle;
 }
 
-
-
-/* Barra de navegación horizontal secundaria*/
-.b-header{
-    border-top: 2px solid #000;
-    margin-top: 13px;
-    margin-bottom: 13px;
-    border-bottom: 2px solid #000;
-    padding: 13px 22rem;
+.live-icon {
+    width: 20px;
+    height: 20px;
 }
+
 .color-cube {
     width: 10px;
     height: 10px;
@@ -43,122 +50,101 @@
     display: inline-block;
 }
 
-/* Barra de navegación generica*/
-
-ul{
-
-    list-style: none;   /*Elimina estilo en los marcadores del nav*/
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-
-}
-li{
-    float: left;
-    margin-right: 1.2rem;
-    
-}
-li a{
-    text-transform: uppercase;
-    text-decoration: none;      /*quita subrayado*/
-    color: #011d26;
-    font-size: 1rem;
-    
+/* === Estilos específicos === */
+.primary-nav {
+    padding: 10px 0 10px 22rem;     /* padding: [arriba] [derecha] [abajo] [izquierda] */
 }
 
-
-
-body{
-    font-family: Inter,Arial,sans-serif;
+.nav-link img {
+    display: block;              /* elimina espacio blanco inferior */
+    width: 20px;                 /* tamaño de la imagen */
+    height: 20px;
+    object-fit: contain;
 }
 
-
-
-.img-putin{
-    max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
-    height: auto;    /* Mantiene la proporción de aspecto de la imagen */ 
+.secondary-nav {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding-left: 20px;
 }
 
-main{
-    margin: 0 30rem;
-    align-items: center;
-    text-align: left;
-}
-@media (max-width:768px){
-    main{
-        margin:2rem;
-    }
-}
-@media (max-width:480px){
-    main{
-        margin:1rem;
-    }
+.secondary-nav .nav-list {
+    display: flex;
+    justify-content: flex-start; /* Los items se alinean al principio */
+    flex-wrap: nowrap; /* No se deben envolver */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
 }
 
-.tit{
-    font-family: Inter,Arial,sans-serif;
-    color: #011d26;
+/* === Título e imagen principal === */
+.tit {
     font-weight: 900;
     font-size: 2.8rem;
+    color: #011d26;
 }
-.txt-img{
+
+.txt-img {
     font-size: 0.65rem;
-    color: #011d26
+    color: #011d26;
 }
 
-/* RESPONSIVE ADAPTATIONS */
+.img-putin {
+    max-width: 100%;
+    height: auto;
+}
 
-/* Tablet */
+
+/* Responsive Navegadores (Primario y secundario) */
 @media (max-width: 1024px) {
-    .a-header {
-        padding-left: 2rem;
+    .primary-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20px;
+        padding: 1rem 0;
     }
 
-    .b-header {
-        padding: 13px 2rem;
+    .primary-nav .nav-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    main {
-        margin: 2rem;
+    .primary-nav .nav-list li:not(:first-child) {
+        display: none;                              /* Oculta todos los elementos excepto el primero */
+    }
+
+    .test{
+        display:inline-flex;
+        align-items: center;
+        
     }
 
     .tit {
         font-size: 2.2rem;
     }
+
+    main {
+        margin: 2rem;
+    }
 }
 
-/* Móvil */
-@media (max-width: 600px) {
-    .a-header,
-    .b-header {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        padding: 1rem;
-    }
-
-    .a-header ul,
-    .b-header ul {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    li {
-        float: none;
-        margin: 0;
-    }
-
-    li a {
-        font-size: 1rem;
-    }
-
+/* Responsive titulo */
+@media (max-width: 1024px) {
     .tit {
-        font-size: 1.6rem;
-    }
-
-    .txt-img {
-        font-size: 0.55rem;
+        font-size: 2rem;
     }
 }
+
+@media (max-width: 768px) {
+    .tit {
+        font-size: 1.6rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .tit {
+        font-size: 1.3rem;
+    }
+}
+
+

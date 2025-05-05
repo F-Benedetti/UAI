@@ -12,72 +12,92 @@
 </head>
 <body>
     <header>
-        <div >
-            <nav class="a-header">
-                <ul>
+        <div>
+          <!-- Navegación primaria -->
+            <nav class="primary-nav" aria-label="Main navigation">
+                <ul class="nav-list">
                     <li>
-                        <img class="img-France24" src="https://static.france24.com/meta_og_twcards/logo_160x160.png" alt="france24">
+                        <img
+                        class="logo-img"
+                        src="https://static.france24.com/meta_og_twcards/logo_160x160.png"
+                        alt="France 24 logo"
+                        >
                     </li>
                     <li>
-                        <a href="https://www.france24.com/en/">Home</a>
+                        <a class="nav-link" href="https://www.france24.com/en/">Home</a>
                     </li>
                     <li>
-                        <a href="https://www.france24.com/en/tv-shows/latest-shows/">Shows</a>
+                        <a class="nav-link" href="https://www.france24.com/en/tv-shows/latest-shows/">Shows</a>
                     </li>
                     <li>
-                        <a href="https://www.france24.com/en/live-news/">
+                        <a class="nav-link" href="https://www.france24.com/en/live-news/">
                             <span>
-                                <img src='data:image/svg+xml;charset=utf-8,<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 4a8.477 8.477 0 0 0-6.375 2.878L6.017 7H10v2H3V2h2v3.152A10.471 10.471 0 0 1 12.5 2C18.299 2 23 6.701 23 12.5S18.299 23 12.5 23 2 18.299 2 12.5h2A8.5 8.5 0 1 0 12.5 4zm.409 9.438V7.636h-1.818V14c0 .344.194.66.502.813l4.45 2.225.813-1.626-3.947-1.974z" fill="%23011D26"/></svg>' alt="icono">
+                                <img
+                                 src="data:image/svg+xml;charset=utf-8,<svg width='24' height='24' xmlns='http://www.w3.org/2000/svg'><path fill-rule='evenodd' clip-rule='evenodd' d='M12.5 4a8.477 8.477 0 0 0-6.375 2.878L6.017 7H10v2H3V2h2v3.152A10.471 10.471 0 0 1 12.5 2C18.299 2 23 6.701 23 12.5S18.299 23 12.5 23 2 18.299 2 12.5h2A8.5 8.5 0 1 0 12.5 4zm.409 9.438V7.636h-1.818V14c0 .344.194.66.502.813l4.45 2.225.813-1.626-3.947-1.974z' fill='%23011D26'/></svg>"
+                                 alt="Newsfeed icon"
+                                >
                             </span>
-                            Newsfeed
+                        Newsfeed
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.france24.com/en/live">
-                            <span class="live">
-                                <img src="data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'><path fill-rule='evenodd' clip-rule='evenodd' d='M1.667 15V2.5h16.666V15H1.667ZM3.333 4.167h13.334v9.166H3.332V4.167Z' fill='%23011D26'/><path d='M6.25 17.5h7.5v-1.667h-7.5V17.5Z' fill='%23011D26'/></svg>" alt="icono" />
-                            </span>Live
+                        <a class="nav-link" href="https://www.france24.com/en/live">
+                            <span class="live-icon">
+                                <img
+                                src="data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'><path fill-rule='evenodd' clip-rule='evenodd' d='M1.667 15V2.5h16.666V15H1.667ZM3.333 4.167h13.334v9.166H3.332V4.167Z' fill='%23011D26'/><path d='M6.25 17.5h7.5v-1.667h-7.5V17.5Z' fill='%23011D26'/></svg>"
+                                alt="Live icon"
+                                >
+                            </span>
+                        Live
                         </a>
                     </li>
                 </ul>
             </nav>
-
-            <nav class="b-header">
-                <ul>
-                    <li>
-                        <a href="https://www.france24.com/en/france/">
-                            <span class="color-cube"></span> France
+        
+            <!-- Navegación secundaria -->
+            <nav class="secondary-nav" aria-label="Section navigation">
+                <ul class="nav-list">
+                    <li class="test">
+                        <a class="nav-link" href="https://www.france24.com/en/france/">
+                            <span class="color-cube"></span> 
+                        France
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.france24.com/en/africa/">
-                            <span class="color-cube"></span> Africa
+                        <a class="nav-link" href="https://www.france24.com/en/africa/">
+                            <span class="color-cube"></span> 
+                        Africa
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.france24.com/en/middle-east/">
-                            <span class="color-cube"></span> Middle East
+                        <a class="nav-link" href="https://www.france24.com/en/middle-east/">
+                            <span class="color-cube"></span> 
+                        Middle East
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.france24.com/en/americas/">
-                            <span class="color-cube"></span> Americas
+                        <a class="nav-link" href="https://www.france24.com/en/americas/">
+                            <span class="color-cube"></span> 
+                        Americas
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.france24.com/en/europe/">
-                            <span class="color-cube"></span> Europe
+                        <a class="nav-link" href="https://www.france24.com/en/europe/">
+                            <span class="color-cube"></span> 
+                        Europe
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.france24.com/en/asia-pacific/">
-                            <span class="color-cube"></span> Asia-Pacific
+                        <a class="nav-link" href="https://www.france24.com/en/asia-pacific/">
+                            <span class="color-cube"></span> 
+                        Asia-Pacific
                         </a>
                     </li>
                 </ul>
             </nav>
         </div>
-    </header>
+    </header>  
+
     <main>
         <h1 class="tit">Live: Putin decrees a 3-day truce as Trump seeks 'permanent' ceasefire in Ukraine</h1>
         <div >
